@@ -1,0 +1,23 @@
+{
+  "name": "gym",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo This is a static template, there is no bundler or bundling involved!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebasc1012/GYM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebasc1012/GYM.git"
+  },
+  "devDependencies": {
+    "serve": "^11.2.0"
+}
+}
