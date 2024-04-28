@@ -1,0 +1,114 @@
+body, html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    
+}
+.Wrapper{
+    margin:30px;
+    display: flex;
+    justify-items: flex-start;
+    align-items: last baseline;
+
+   
+}
+@font-face{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 100 900;
+    display: fallback;
+    src:url(/fonts/robotoslab.woff2)format('woff2');;
+}
+
+
+
+@font-face{
+    font-family: 'Archivo Black';
+    font-style: normal;
+    font-weight: 100 900;
+    display: fallback;
+    src:url(/fonts/archiveBlack.woff2)format('woff2');;
+}
+.Wrapper-Title{
+    display: flex;
+    flex-direction: column;
+    width: fit-content; 
+    height: fit-content;
+    cursor:default;     
+}
+.title{
+    position: relative;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 20.5rem;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: -60px;   
+}
+
+.sub-title{
+    align-self: flex-end;
+    position: relative;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 7.54rem;
+    margin-top: -20px;
+    margin-left: 0px;
+    margin-right: 13px;
+    margin-bottom: 0px;
+    
+    
+}
+
+
+.overposition{
+position: absolute;
+top:0;
+left: 0;
+color: rgb(184, 47, 47);
+transition: clip-path 1000ms;
+clip-path: polygon(
+    0% 100%,
+    100% 100%,
+    100% 100%,
+    0% 100%);
+    
+    
+
+}
+
+.Wrapper-Title:hover .overposition{
+   clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%
+    );
+    transition: clip-path 400ms;
+}
+
+.wrapper-image{
+flex: 1;
+min-width: 350px;
+overflow: hidden;
+}
+
+
+.imagen1{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 500ms; 
+    transform-origin:  top right;
+}
+
+.wrapper-image:hover .imagen1{
+    transition: transform 300ms; 
+    transform: scale(1.1);
+    transform-origin:  top right;
+}
