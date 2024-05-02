@@ -1,35 +1,35 @@
 
 .Ejercicios-Wrapper{
-    display: flex;
-    justify-content: space-between;
-    gap:40px
-
-}
-
-.Ejercicio-pierna{
-    --padding:20px;
-    --radio-interno:14px;
-    max-width: 600px;
-    display: flex;
-    
+    margin: var(--margin-page);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: var(--padding);
-   background-color: white;
-    border-radius:calc(var(--radio-interno) + var(--padding));
-    overflow: auto;
-    scroll-snap-type: x mandatory;
+    margin-bottom: 100px;
 }
-.pierna-card{
+.Ejercicio-general{
+    --padding:15px;
+    --radio-interno:5px;
+    max-width: 600px;
+    height: 500px;
+    display: flex;
+    gap: 10px;
+    padding: var(--padding);
+   background-color: rgb(5, 4, 4);
+   border-radius: 4px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;  
+    scrollbar-width: none;
+}
+.ejercicio-card{
+
 position: relative;
 min-width: calc(100% - 32px);
-height: 700px;
 overflow: hidden;
 scroll-snap-align: center;
 border-radius: var(--radio-interno);
 }
 
 .cover-art{
-    
     width: 100%;
     height: 100%;
     display: block;
@@ -65,10 +65,3 @@ border-radius: var(--radio-interno);
       );
 }
 
-.info{
-flex: 1;
-background-color: white;
-padding: 25px;
-border-radius: 34px;
-
-}

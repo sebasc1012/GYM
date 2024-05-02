@@ -3,39 +3,45 @@ body, html{
     padding: 0;
     margin: 0;
 }
-body{
+html{
+    --margin-page:50px;
+    --imagen-facebook:url("/img/facebook.svg");
+    --imagen-twitter:url("/img/twitterlogo.svg");
+    --imagen-instagram:url("/img/intagram.svg");
     background-color: black;
-    
-}
-.Wrapper{
-    margin:30px;
-    display: flex;
-    justify-items: flex-start;
-    align-items: last baseline;
-
-   
 }
 @font-face{
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 100 900;
     display: fallback;
-    src:url(/fonts/robotoslab.woff2)format('woff2');;
+    src:url(/fonts/robotoslab.woff2)format('woff2');
 }
-
-
-
 @font-face{
     font-family: 'Archivo Black';
     font-style: normal;
     font-weight: 100 900;
     display: fallback;
-    src:url(/fonts/archiveBlack.woff2)format('woff2');;
+    src:url(/fonts/archiveBlack.woff2)format('woff2');
 }
+
+.Wrapper{
+    --backgroun-imagen:url("/img/fondodestop.png");
+    background-image:   var(--backgroun-imagen),linear-gradient(0deg, rgba(255, 210, 215, 0) 0%, #ffd2d7 100%);
+    background-size: min(60%, 800px), 100% 40%;
+    background-position: right top, center -30%;
+    background-repeat: no-repeat; 
+   min-height: 480px;
+   
+}
+
 .Wrapper-Title{
     display: flex;
     flex-direction: column;
-    width: fit-content; 
+    align-items:flex-start;
+    width: fit-content;
+    padding: 56px 32px;
+    margin-left: 90px;
     height: fit-content;
     cursor:default;     
 }
@@ -43,11 +49,11 @@ body{
     position: relative;
     color: white;
     font-family: "Archivo Black", sans-serif;
-    font-size: 20.5rem;
+    font-size: 15rem;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: -60px;   
+    margin-bottom: -30px;   
 }
 
 .sub-title{
@@ -55,8 +61,8 @@ body{
     position: relative;
     color: white;
     font-family: "Archivo Black", sans-serif;
-    font-size: 7.54rem;
-    margin-top: -20px;
+    font-size: 6rem;
+    margin-top: -25px;
     margin-left: 0px;
     margin-right: 13px;
     margin-bottom: 0px;
@@ -69,16 +75,13 @@ body{
 position: absolute;
 top:0;
 left: 0;
-color: rgb(184, 47, 47);
-transition: clip-path 1000ms;
+color: rgb(122, 128, 167);
+transition: clip-path 600ms;
 clip-path: polygon(
     0% 100%,
     100% 100%,
     100% 100%,
     0% 100%);
-    
-    
-
 }
 
 .Wrapper-Title:hover .overposition{
@@ -88,7 +91,7 @@ clip-path: polygon(
         100% 100%,
         0% 100%
     );
-    transition: clip-path 400ms;
+    transition: clip-path 300ms;
 }
 
 .wrapper-image{

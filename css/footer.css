@@ -1,0 +1,92 @@
+footer{
+    display: flex;
+    gap: 50px;
+    margin: auto;
+    width: fit-content;
+    height: 400px;
+}
+
+
+.logo-part-footer{
+    display: flex;
+   
+}
+
+.contenido-footer{
+    display: flex;
+    flex-direction: column;
+   padding: 10px;
+  width: 150px;
+    font-family: "Manrope", sans-serif;
+}
+
+.title-footer{
+    font-size: 1.1rem;
+margin: 20px 0px;
+font-weight: 700;
+color: gray;
+
+}
+
+.opciones-footer{
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    list-style-type: none;
+    color: white;
+    padding: 0;
+}
+.individual-items{
+    margin-bottom: 15px;
+}
+
+.principal-redes-sociales{
+    margin: auto;
+   
+}
+
+.wrapper-redes-sociales{
+    width: fit-content;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.redes-sociales-contenedor{
+    margin: 0;
+}
+
+.links-class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 54px;
+    background-color: rgb(34,35,38);
+    border-radius: 50%;
+    overflow: hidden;
+    
+
+}
+.span-img{
+    height: 24px;
+    width: 24px;
+    background-image:var(--imagen-facebook), linear-gradient(0deg, white 0%, #faf6f6 100%);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.facebook{
+    background-image:var(--imagen-facebook), linear-gradient(0deg, white 0%, #faf6f6 100%);
+}
+
+.instagram{
+    background-image: var(--imagen-instagram), linear-gradient(
+        0deg, white 0%, white 100%
+    );
+}
+
+.twitter{
+    background-image: var(--imagen-twitter), linear-gradient(
+        0deg, white 0%, white 100%);
+}
