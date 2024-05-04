@@ -1,7 +1,8 @@
 
 .Barra-header{
-    --color-text-hover:#1ED760;
+   
     background-color: black;
+    font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,8 +10,6 @@
     width: 1170px;
     height: 80px; 
 }
-
-
 .left-part{
     width: 140px;
     display: flex;
@@ -22,9 +21,7 @@
     height: 80px;
     display: block;
 }
-
 .logo-name{
-    font-family: "Manrope", sans-serif;
     font-weight: 900;
     color: white;
     cursor: pointer;
@@ -36,9 +33,6 @@
     display: block;
     object-fit: cover;
 }
-
-
-
 .right-part{
     display: flex;
     align-items: center;
@@ -47,11 +41,11 @@
     margin: 0;
     padding:0;
     
+    
 }
 .premium-mode{
     position: relative;
     padding: 28px 17px;
-    font-family: "Manrope", sans-serif;
     color: white;
     font-weight: bold;
     cursor: pointer;  
@@ -88,20 +82,21 @@
         background-color: black;
     }   
 }
-
-
 .ayuda-mode{
-    padding: 28px 17px;
+    display: inline-block;
+    font-size: 1rem;
     font-weight: bold;
-    font-family: "Manrope", sans-serif;
+}
+.link-ayuda-mode{
+    display: block;
+    padding: 28px 17px;
+    text-decoration: none;
     color: white;
     cursor: pointer;
 }
-
-.ayuda-mode:hover{
+.link-ayuda-mode:hover{
     color: var(--color-text-hover);
 }
-
 .descarga-mode{
     padding: 28px 17px;
     font-family: "Manrope", sans-serif;
@@ -109,25 +104,35 @@
     color: white;
     cursor: pointer;
 }
-
 .descarga-mode:hover{
     color: var(--color-text-hover);
 }
-
-
 .separador-mode{
-    color: white;
-    width: 16px;
-    height: 16px;
+   width: 1px;
+   height: 16px;
+  background-color: white;
 }
-
 .perfil-mode{
+    padding: 15px 17px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     position: relative;
-    padding: 28px 17px;
     font-weight: bold;
-    font-family: "Manrope", sans-serif;
     color: white;
     cursor: pointer;
+    }
+.contenedor-icono-usuario{
+    margin: auto 10px auto 0px;
+    background-color:white;
+    width: 40px;
+    border-radius: 50%;
+}
+.icono-usuario{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 .sub-menu-perfil-mode{
     display: none;
@@ -152,7 +157,6 @@
    top:-15px;
    right: 8px;
 }
-
 .options-perfil-mode{
     display: flex;
     flex-direction: column;
@@ -161,23 +165,22 @@
     gap:15px ;
     color:black;
 }
-
 .option-cuenta-mode{
     color: black;
 }
 .option-cuenta-mode:hover{
-    color:#1ED760;
+    color:var(--color-text-hover);
 
 }
 .iniciar-option-mode{
     color:rgb(145,148,150);
 }
 .iniciar-option-mode:hover{
-    color:#1ED760;
+    color:var(--color-text-hover);
 
 }
  .perfil-mode:hover{
-    color:#1ED760;
+    color:var(--color-text-hover);
     .sub-menu-perfil-mode{
         display: inline-block;
     }

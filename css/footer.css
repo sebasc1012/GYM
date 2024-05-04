@@ -3,7 +3,7 @@ footer{
     gap: 50px;
     margin: auto;
     width: fit-content;
-    height: 400px;
+    height:fit-content;
 }
 
 
@@ -41,8 +41,8 @@ color: gray;
 }
 
 .principal-redes-sociales{
-    margin: auto;
-   
+    justify-content: center;
+    display: flex;
 }
 
 .wrapper-redes-sociales{
@@ -71,7 +71,6 @@ color: gray;
 .span-img{
     height: 24px;
     width: 24px;
-    background-image:var(--imagen-facebook), linear-gradient(0deg, white 0%, #faf6f6 100%);
     background-repeat: no-repeat; 
     background-size: cover;
 }
@@ -79,14 +78,23 @@ color: gray;
 .facebook{
     background-image:var(--imagen-facebook), linear-gradient(0deg, white 0%, #faf6f6 100%);
 }
-
+.facebook:hover{
+    background-image:var(--imagen-facebook), linear-gradient(0deg, var(--color-text-hover) 0%, var(--color-text-hover) 100%);
+}
 .instagram{
     background-image: var(--imagen-instagram), linear-gradient(
         0deg, white 0%, white 100%
     );
 }
+.instagram:hover{
+    background-image: var(--imagen-instagram), linear-gradient(0deg, var(--color-text-hover) 0%, var(--color-text-hover) 100%);
 
+}
 .twitter{
     background-image: var(--imagen-twitter), linear-gradient(
         0deg, white 0%, white 100%);
+}
+.twitter:hover{
+    background-image: var(--imagen-twitter), linear-gradient(0deg, var(--color-text-hover) 0%, var(--color-text-hover) 100%);
+
 }

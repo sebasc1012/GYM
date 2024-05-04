@@ -1,62 +1,50 @@
 
 main{
-    
     display: flex;
     flex-direction: column;
     gap:80px;
+    
 }
 .subtitulos-clase-media{
   margin: auto;
   text-align: center;
   width: 700px;
+  font-family: "Manrope", sans-serif;
+  color: white;
 }
 .primer-subtitulo-clase-media{
-    font-family: "Manrope", sans-serif;
-    color: white;
     font-size: 3rem;
     height: fit-content;
     margin: 0;
     line-height: 3.5rem;
 }
 .segundo-subtitulo-clase-media{
-    font-family: "Manrope", sans-serif;
-    color: white;
     font-size: 1.5rem;
     height: fit-content;
     margin: 8px 0px;
 }
-
-
-
-
 .section-mode-wrapper{
    overflow: scroll;
    scrollbar-width: none;
-   scroll-snap-type: center; 
-   
-   
+   scroll-snap-type: center;  
+   mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent); 
 }
 .contenedor-cartas-escoger{
    padding-top: 30px;
    padding-bottom: 30px;
    background-image: linear-gradient(
-  0deg,
-  hsl(0deg 0% 0%) 0%,
-  hsl(339deg 0% 0%) 3%,
-  hsl(339deg 0% 0%) 7%,
-  hsl(339deg 0% 0%) 11%,
-  hsl(339deg 0% 0%) 18%,
-  hsl(0deg 0% 0%) 29%,
-  hsl(350deg 33% 20%) 59%,
-  hsl(352deg 20% 36%) 94%,
-  hsl(353deg 17% 53%) 99%,
-  hsl(353deg 30% 72%) 100%,
-  hsl(353deg 100% 91%) 100%
-);
+    0deg,
+    hsl(0deg 0% 0%) 9%,
+    hsl(345deg 9% 9%) 50%,
+    hsl(353deg 10% 17%) 63%,
+    hsl(355deg 9% 26%) 74%,
+    hsl(356deg 9% 35%) 85%,
+    hsl(354deg 9% 44%) 100%
+  );
     
     display: grid;
     grid-auto-flow: column;
-    padding-left: max(16px, (100% - 980px)/2);
+    padding-left: max(16px, (100% - 780px)/2);
     padding-right: 20px;
     gap:30px;
     width: fit-content;
@@ -70,8 +58,13 @@ main{
     height: 550px;
     border-radius: 23px;  
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 550ms;
 }
-
+.seccion-cartas-escoger:hover{
+    transform: scale(1.02);
+    transition: transform 250ms;
+}
 .imagen-figure{
     margin: 0;
     padding: 0;
@@ -83,7 +76,6 @@ main{
     display: block;
     object-fit: cover;
 }
-
 .contenedor-informacion{
     height: 100%;
     display: flex;
@@ -100,5 +92,94 @@ main{
 }
 .parrafo-informacion{
     text-align: justify;
+}
+.Wrapper-informacion{
+    background-image: linear-gradient(
+        0deg,
+        hsl(0deg 0% 0%) 0%,
+        hsl(0deg 100% 0%) 26%,
+        hsl(0deg 0% 0%) 35%,
+        hsl(0deg 33% 1%) 41%,
+        hsl(0deg 20% 1%) 46%,
+        hsl(0deg 18% 3%) 50%,
+        hsl(0deg 17% 12%) 54%,
+        hsl(356deg 15% 21%) 58%,
+        hsl(354deg 13% 30%) 61%,
+        hsl(355deg 11% 39%) 65%,
+        hsl(354deg 9% 39%) 68%,
+        hsl(356deg 9% 31%) 72%,
+        hsl(354deg 9% 22%) 75%,
+        hsl(0deg 9% 13%) 78%,
+        hsl(0deg 8% 5%) 82%,
+        hsl(0deg 9% 2%) 85%,
+        hsl(0deg 0% 2%) 89%,
+        hsl(0deg 0% 1%) 92%,
+        hsl(0deg 0% 0%) 96%,
+        hsl(0deg 0% 0%) 100%
+      );
+
+}
+.wrapper-seccion-informacion-ejercicios{
+   margin: auto;
+   width: 800px;
+}
+.contenedor-informacion-ejercicios{
+    font-family: "Manrope", sans-serif;
+    color: white;
+}
+.contenedor-titulo-informacion{
+    margin: 0;
+    text-align: center;
+   font-size: 2rem;
+   scale: 0.8 ;
+    opacity: 0;
+    animation: desvanecido linear forwards;
+    animation-timeline: view();
+    animation-range: entry ;
+}
+@keyframes desvanecido{
+
+    to{
+     scale: 1 ;
+    opacity: 1;
+    }
+}
+.titulo-informacion-ejercicos{
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+.wrapper-texto-ejercicios{
+    list-style-type: none;
+    padding: 0;
+    
+    
+}
+.parrafos-informacion-ejercicios{
+    text-align: justify;
+    font-size: 1.5rem;
+    margin: 40px 0px;
+}
+.contenedor-imagen-ejercicios-informacion{
+    margin: auto;
+    max-width: 600px;
+    scale: 0.8;
+    opacity: 0;
+    animation: animation-image linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes animation-image{
+    to{
+        scale:1;
+        opacity: 1;
+    }
+}
+.imagen-ejercicios-informacion{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    
+    
 }
 

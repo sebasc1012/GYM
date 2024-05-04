@@ -1,0 +1,94 @@
+.centro-informacion-pagos{
+    position: relative;
+}
+.fondo-imagen-centro{
+    margin: 0;
+    padding: 0;
+    scale: 0.5;
+    transform-origin: to top;
+    animation: imagen-centro linear forwards;
+    animation-timeline: view();
+    animation-range-start:-100% ;
+    animation-range-end:30% ;  
+}
+@keyframes imagen-centro {
+
+    25%{
+        scale:0.6;
+    }
+    50%{
+        scale: 0.7;
+    }
+    75%{
+        scale: 0.8;
+    }
+    100%{
+        scale: 1;
+    }
+
+}
+.imagen-centro{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 14px;
+}
+.contenedor-frase-motivacional{
+
+   max-width: 700px;
+    position: sticky;
+    bottom: 50px;
+    left: 0px;
+    z-index: 1000;
+}
+.frase-motivacional{
+    font-family: "Archivo Black", sans-serif;
+    color: white; 
+    text-shadow: 2px 4px 8px hsl(0 0 0/0.8); 
+    font-size: 6rem;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 150px;
+    
+}
+.wrapper-pagos{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 80px;
+    font-family: "Manrope", sans-serif;
+    color: white;
+}
+.contenedor-formas-pago{
+    margin-top: -205px;
+    width: 600px;
+}
+.titulo-forma-de-pago{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+.parrafo-formas-de-pago{
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.wrapper-imagenes-forma-pago{
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor-imagenes-pago{
+    padding: 2px;
+    background-color: white;
+    border-radius: 4px;
+    width: 45px;
+    height: 30px;
+}
+.imagenes-forma-pago{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}

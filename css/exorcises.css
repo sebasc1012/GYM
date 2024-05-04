@@ -1,38 +1,33 @@
 
 .Ejercicios-Wrapper{
-    margin: var(--margin-page);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 100px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: auto;
+    padding: 130px;
 }
 .Ejercicio-general{
-    --padding:15px;
-    --radio-interno:5px;
     max-width: 600px;
     height: 500px;
     display: flex;
     gap: 10px;
-    padding: var(--padding);
-   background-color: rgb(5, 4, 4);
-   border-radius: 4px;
+    background-color: rgb(5, 4, 4);
     overflow: auto;
     scroll-snap-type: x mandatory;  
     scrollbar-width: none;
 }
 .ejercicio-card{
-
 position: relative;
 min-width: calc(100% - 32px);
 overflow: hidden;
 scroll-snap-align: center;
-border-radius: var(--radio-interno);
 }
-
 .cover-art{
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: cover;
 }
 .Tipo-ejercicio{
     position: absolute;
@@ -63,5 +58,93 @@ border-radius: var(--radio-interno);
         hsla(0, 0%, 0%, 0.76) 91.9%,
         hsla(0, 0%, 0%, 0.77) 100%
       );
+}
+.wrapper-subscripciones-etiquetas{
+    font-family: "Manrope", sans-serif;
+    color: white;
+    border-radius: 18px;
+    background-color: rgb(36,36,36);
+    width: 400px;
+    margin: 0px auto;
+}
+.contenedor-informacion-etiquetas-suscripciones{
+    margin:15px 40px;
+}
+.contenedor-logo-suscripciones{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.contenedor-imagen-logo{
+    width: 40px;
+    height: 40px;
+}
+
+.imagen-logo{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.premium-subtitle{
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.subtitulo-etiqueta-pago{
+    margin: 0;
+    text-align: center;
+    font-size: 2.8rem; 
+}
+.primero{
+    color: #C4B1D3;
+}
+.segundo{
+    color: rgb(254,200,98);
+
+}
+.divisor-etiqueta-subs{
+    border: none;
+    height: 1px;
+    margin: 16px 20px;
+    color: hsl(100 100 100 /0.1);
+    background-color:hsl(100 100 100 /0.1);
+}
+.information-etiquetas-subscripcion{
+   margin-right: 20px;
+    font-size: 1rem;
+}
+.etiquetas-subscripcion{
+    margin: 10px 0px;
+}
+.buttom-subscribirse{
+    margin: auto;
+    height: 60px;
+    width: 320px;
+    color: black;
+    display: grid;
+    place-content: center;
+    border-radius: 40px;
+    margin-top: 90px;
+    cursor: pointer;
+    transition: transform 500ms;
+}
+.buttom-subscribirse:hover{
+    transform: scale(1.1);
+    transition: transform 250ms;
+}
+.info-buttom{
+    font-weight: bold;
+    padding: 30px;
+    font-size: 1rem;
+    text-align: center;
+}
+.estudiantes{
+    background-color:#C4B1D3 ;
+}
+.duo{
+background-color:rgb(254,200,98) ;
 }
 
