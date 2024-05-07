@@ -26,52 +26,48 @@ html{
     display: fallback;
     src:url(/fonts/archiveBlack.woff2)format('woff2');
 }
-
 @font-face {
     font-family: 'Manrope';
     src: url(/fonts/ManropeFont.woff2)format('woff2');
 }
-
 .Wrapper{
-    
+   
     background-image:   var(--backgroun-imagen),linear-gradient(0deg, rgba(255, 210, 215, 0) 0%, #ffd2d7 100%);
     background-size: min(60%, 800px), 100% 40%;
-    background-position: right top, center -30%;
+    background-position: right top 30%, center -30%;
     background-repeat: no-repeat; 
-   min-height: 480px;
-   
+    max-height: 430px; 
+    min-height: 100px;
+    margin-bottom: 100px;
+    
 }
-
 .Wrapper-Title{
     display: flex;
     flex-direction: column;
+    gap:7px;
     width: fit-content;
-    padding: 56px 32px;
-    margin-left: 90px;
     cursor:default;   
     font-family: "Archivo Black", sans-serif;
     color: white;  
+    margin-left: 50px;
 }
 .title{
     position: relative;
-    font-size: 15rem;
+    font-size: clamp(3rem, 16vw + 1rem , 15rem);
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: -30px;   
+    text-shadow: 2px 2px 2px hsl(0 0 0/0.2);
 }
-
 .sub-title{
-    align-self: flex-end;
     position: relative;
-    font-size: 6rem;
-    margin-top: -25px;
-    margin-left: 0px;
-    margin-right: 13px;
-    margin-bottom: 0px; 
+    align-self: flex-end;
+    font-size: clamp(1rem, 5vw + 1rem , 6rem);
+    margin: 0;
+    transform: translate(-8px, -27px);
+
 }
-
-
 .overposition{
 position: absolute;
 top:0;
@@ -85,13 +81,48 @@ clip-path: polygon(
     0% 100%);
 }
 
-.Wrapper-Title:hover .overposition{
-   clip-path: polygon(
-        0% 0%,
-        100% 0%,
-        100% 100%,
-        0% 100%
-    );
-    transition: clip-path 300ms;
-}
 
+@media (max-width: 1100px){
+    /* Tablets */
+    .Wrapper{
+        margin-bottom: 60px;
+    }
+    .Wrapper-Title{
+        margin-left: 10px; 
+        gap:0;
+        
+    }
+    .sub-title{
+        transform: translate(-8px, -1px);
+    }
+  
+  
+  }
+  @media (max-width: 600px){
+    /* Phones */
+    .Wrapper{
+        background-position: right top , center -30%;
+        margin-bottom: 20px;
+    }
+    .Wrapper-Title{
+        margin-left: 5px; 
+        gap:15px; 
+    }
+    .sub-title{
+        transform: translateX(-5px);
+    }
+
+   
+  }
+  @media (hover: hover) and (pointer: fine){
+    .Wrapper-Title:hover .overposition{
+        clip-path: polygon(
+             0% 0%,
+             100% 0%,
+             100% 100%,
+             0% 100%
+         );
+         transition: clip-path 300ms;
+     }
+
+  }

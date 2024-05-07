@@ -1,14 +1,39 @@
 
 .Barra-header{
-   
     background-color: black;
     font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    width: 1170px;
+    padding: 0px 30px;
+    max-width: 1170px;
+    min-width: 1000px;
     height: 80px; 
+}
+.button-screen-phone{
+    display: none;
+    background-color:  hsl(130, 65%, 24%);
+    border-radius: 12px;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    outline-offset:4px;
+    
+    }
+.texto-button-phone{
+    display: block;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px hsl(0 0 0/0.2);
+    background: var(--color-text-hover);
+    transform: translateY(-6px);
+}
+.button-screen-phone:active .texto-button-phone{
+    transform: translateY(-2px);
 }
 .left-part{
     width: 140px;
@@ -39,9 +64,7 @@
     gap:20px;
     list-style: none;
     margin: 0;
-    padding:0;
-    
-    
+    padding:0;   
 }
 .premium-mode{
     position: relative;
@@ -72,16 +95,6 @@
     font-size: 0.8rem;
     color:gray;
 }
-.premium-mode:hover{
-    color:var(--color-text-hover);
-    .sub-menu-premium-mode{
-        display: flex;
-        flex-direction: column;     
-    }
-    .options-sub-menu-premium:hover{
-        background-color: black;
-    }   
-}
 .ayuda-mode{
     display: inline-block;
     font-size: 1rem;
@@ -94,18 +107,12 @@
     color: white;
     cursor: pointer;
 }
-.link-ayuda-mode:hover{
-    color: var(--color-text-hover);
-}
 .descarga-mode{
     padding: 28px 17px;
     font-family: "Manrope", sans-serif;
     font-weight: bold;
     color: white;
     cursor: pointer;
-}
-.descarga-mode:hover{
-    color: var(--color-text-hover);
 }
 .separador-mode{
    width: 1px;
@@ -168,20 +175,61 @@
 .option-cuenta-mode{
     color: black;
 }
-.option-cuenta-mode:hover{
-    color:var(--color-text-hover);
-
-}
 .iniciar-option-mode{
     color:rgb(145,148,150);
 }
-.iniciar-option-mode:hover{
-    color:var(--color-text-hover);
 
-}
- .perfil-mode:hover{
-    color:var(--color-text-hover);
-    .sub-menu-perfil-mode{
-        display: inline-block;
+@media (max-width: 1100px){
+    /* Tablets */
+    .Barra-header{
+        min-width: 550px;
     }
- }
+    .right-part{
+        display: none;
+    }
+    .button-screen-phone{
+        display: revert;
+    }
+  }
+
+  @media (max-width: 600px){
+    /* Phones */
+    .Barra-header{
+        min-width: 350px;
+        padding: 0px 10px;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .premium-mode:hover{
+        color:var(--color-text-hover);
+        .sub-menu-premium-mode{
+            display: flex;
+            flex-direction: column;     
+        }
+        .options-sub-menu-premium:hover{
+            background-color: black;
+        }   
+    }
+    .link-ayuda-mode:hover{
+        color: var(--color-text-hover);
+    }
+    .descarga-mode:hover{
+        color: var(--color-text-hover);
+    }
+    .option-cuenta-mode:hover{
+        color:var(--color-text-hover);
+    
+    }
+    .iniciar-option-mode:hover{
+        color:var(--color-text-hover);
+    
+    }
+    .perfil-mode:hover{
+        color:var(--color-text-hover);
+        .sub-menu-perfil-mode{
+            display: inline-block;
+        }
+     }
+  }
+ 

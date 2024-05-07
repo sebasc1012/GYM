@@ -1,12 +1,11 @@
 footer{
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
     margin: auto;
     width: fit-content;
     height:fit-content;
 }
-
-
 .logo-part-footer{
     display: flex;
    
@@ -98,3 +97,24 @@ color: gray;
     background-image: var(--imagen-twitter), linear-gradient(0deg, var(--color-text-hover) 0%, var(--color-text-hover) 100%);
 
 }
+
+@media (max-width: 1100px){
+    /* Tablets */
+    footer{
+        justify-content: center;
+        gap:30px;}
+}
+
+
+@media (max-width: 930px){
+    /* Phones */
+   
+    footer{
+        text-align: center;
+        justify-content: center;
+        gap:15px;
+        margin: 0 10px;
+    }
+
+   
+  }

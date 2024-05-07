@@ -2,6 +2,7 @@
 .Ejercicios-Wrapper{
     
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
     margin: auto;
@@ -64,7 +65,8 @@ scroll-snap-align: center;
     color: white;
     border-radius: 18px;
     background-color: rgb(36,36,36);
-    width: 400px;
+    width: clamp(400px, 75%, 450px);
+    max-width: 100%;
     margin: 0px auto;
 }
 .contenedor-informacion-etiquetas-suscripciones{
@@ -90,7 +92,7 @@ scroll-snap-align: center;
 }
 .premium-subtitle{
     margin: 0;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 3.5vw , 1.4rem);
     font-weight: 700;
 }
 .subtitulo-etiqueta-pago{
@@ -122,7 +124,8 @@ scroll-snap-align: center;
 .buttom-subscribirse{
     margin: auto;
     height: 60px;
-    width: 320px;
+    max-width: 320px;
+    min-width: 200px;
     color: black;
     display: grid;
     place-content: center;
@@ -131,10 +134,7 @@ scroll-snap-align: center;
     cursor: pointer;
     transition: transform 500ms;
 }
-.buttom-subscribirse:hover{
-    transform: scale(1.1);
-    transition: transform 250ms;
-}
+
 .info-buttom{
     font-weight: bold;
     padding: 30px;
@@ -147,4 +147,34 @@ scroll-snap-align: center;
 .duo{
 background-color:rgb(254,200,98) ;
 }
+@media (max-width: 1100px){
+    /* Tablets */
+    .wrapper-subscripciones-etiquetas{
+        padding-bottom: 30px;
+        margin: 20px;
+       }
+}
 
+
+@media (max-width: 930px){
+    /* Phones */
+    .Ejercicios-Wrapper{
+        padding: 30px;
+
+    }
+   .buttom-subscribirse{
+    margin: 0 10px;
+   }
+   .wrapper-subscripciones-etiquetas{
+    padding-bottom: 20px;
+    margin: 20px;
+   }
+   
+   
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .buttom-subscribirse:hover{
+        transform: scale(1.1);
+        transition: transform 250ms;
+    }
+  }

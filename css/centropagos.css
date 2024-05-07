@@ -34,8 +34,8 @@
     border-radius: 14px;
 }
 .contenedor-frase-motivacional{
-
-   max-width: 700px;
+   max-width: 600px;
+   min-width: 200px;
     position: sticky;
     bottom: 50px;
     left: 0px;
@@ -45,7 +45,7 @@
     font-family: "Archivo Black", sans-serif;
     color: white; 
     text-shadow: 2px 4px 8px hsl(0 0 0/0.8); 
-    font-size: 6rem;
+    font-size: clamp(1rem, 5vw + 1rem , 6rem);
     margin-top: 50px;
     margin-bottom: 0px;
     margin-right: 0px;
@@ -55,22 +55,23 @@
 .wrapper-pagos{
     display: flex;
     justify-content: flex-end;
-    margin: 0 80px;
     font-family: "Manrope", sans-serif;
     color: white;
 }
 .contenedor-formas-pago{
     margin-top: -205px;
-    width: 600px;
+    margin-right: 50px;
+    width: clamp(350px, 65%, 550px);
+    
 }
 .titulo-forma-de-pago{
-    font-size: 2.5rem;
+    font-size:clamp(1.1rem, 3vw + 1rem, 2.5rem);
     text-align: center;
-    margin: 0px;
+    margin:0  auto;
     margin-bottom: 20px;
 }
 .parrafo-formas-de-pago{
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3.5vw , 1.2rem);
     margin: 0;
     margin-bottom: 30px;
     text-align: center;
@@ -78,6 +79,7 @@
 .wrapper-imagenes-forma-pago{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .contenedor-imagenes-pago{
     padding: 2px;
@@ -92,3 +94,55 @@
     display: block;
     object-fit: cover;
 }
+
+@media (max-width: 1100px){
+    /* Tablets */
+    
+    .frase-motivacional{
+     max-width: 350px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 50px;  
+    }
+    .contenedor-formas-pago{
+        margin-top: -125px;   
+    }
+    .wrapper-pagos{
+        margin: 0;
+    }
+  }
+  @media (max-width: 930px){
+    /* Phones */
+    .frase-motivacional{
+        text-align: center;
+        max-width: 450px;
+        min-width: 250px;
+       margin: auto;  
+       }
+       .wrapper-pagos{
+        margin: 0 20px;
+      justify-content: center;
+    }
+    .contenedor-frase-motivacional{
+        margin: auto;
+    }
+
+    .contenedor-formas-pago{
+        margin:20px auto; 
+    }
+    .titulo-forma-de-pago{
+        width: 350px;
+        margin: auto;
+    }
+    .parrafo-formas-de-pago{
+        margin:10px 20px;
+    }
+  .wrapper-imagenes-forma-pago{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+   
+  }
